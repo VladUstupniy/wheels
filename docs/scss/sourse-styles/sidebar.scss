@@ -1,0 +1,124 @@
+.sidebar {
+    height: 80px;
+    padding: 25px 0px 30px 0px;
+    box-shadow: 0 0 20px 10px rgb(233, 233, 233);
+}
+.sidebar__nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.sidebar__items {
+    display: none;
+    li {
+        display: inline-block;
+        margin-right: 100px;
+    }
+    & li:last-child {
+        margin-right: 0;
+    }
+    a {
+        color: #000;
+        font-size: 18px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1.25px;
+        transition: all .2s ease-out;
+    }
+    & a:hover {
+        color: #ffc886;
+    }
+
+    @media (min-width: 1200px) {
+        display: block;
+    }
+}
+
+
+
+.sidebar__items--mobile {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    display: block;
+    @media (min-width: 1200px) {
+        display: none;
+    }
+
+    a {
+        display: block;
+        color: #000;
+        font-size: 18px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1.25px;
+        transition: all .2s ease-out;
+        margin-bottom: 10px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    & a:hover {
+        color: #ffc886;
+    }
+}
+.drop-down__link {
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 0px 0px 0px 30px;
+    cursor: pointer;
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1.25px;
+
+    &::before,
+    &::after {
+        position: absolute;
+        content: '';
+        top: 8px;
+        width: 10px;
+        height: 1px;
+        background: #000;
+        transition: all 0.3s ease 0s;
+    }
+
+    &::before {
+        left: 0;
+        transform: rotate(40deg);
+        top: 10px;
+    }
+    &::after {
+        left: 0px;
+        transform: rotate(-40deg);
+        top: 3px;
+    }
+
+    &.active {
+        &::before,
+        &::after {
+            background-color: #ffc886;
+        }
+        &::before {
+            transform: rotate(-40deg);
+        }
+        &::after {
+            transform: rotate(40deg);
+        }
+    }
+}
+.drop-down__content {
+    position: absolute;
+    right: -200px;
+    top: 50px;
+    padding: 20px 15px 10px 15px;
+    box-shadow: 0px 10px 15px 1px rgba(0, 0, 0, 0.5);
+    transition: all .3s ease-out;
+
+    &.active {
+        right: 0px;
+    }
+}
