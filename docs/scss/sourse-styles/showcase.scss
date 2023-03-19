@@ -1,0 +1,35 @@
+.showcase {
+    padding: 65px 0px 55px 0px;
+}
+.showcase__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -30px 65px;
+}
+.showcase__img {
+    flex: 0 0 25%;
+    img {
+        display: block;
+        width: 385px;
+        height: 385px;
+    }
+}
+.showcase__link {
+    font-size: 24px;
+    color: rgb(59, 59, 59);
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: 2px;
+    a {
+        color: #1e1e1e;
+        text-decoration: underline;
+        transition: all .2s ease-out;
+
+        &:hover {
+            color: #ffc886;
+        }
+    }
+}
