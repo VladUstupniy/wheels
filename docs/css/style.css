@@ -141,6 +141,27 @@ input::-ms-clear {
   margin-bottom: 20px;
 }
 
+.statistics__title {
+  font-weight: 800;
+  font-size: 30px;
+  color: rgb(237, 237, 237);
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.statistics__subtitle {
+  font-size: 18px;
+  color: rgb(237, 237, 237);
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 1.25px;
+  margin-bottom: 75px;
+}
+
 .header {
   position: relative;
   background-color: #000;
@@ -232,6 +253,72 @@ input::-ms-clear {
   display: block;
   width: 100%;
   height: 100%;
+}
+
+.statistics {
+  padding: 95px 0px 100px 0px;
+  background-image: url("../img/bg/bg-02.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.statistics__content {
+  max-width: 930px;
+  padding: 0px 15px;
+  margin: 0 auto;
+}
+
+.statistic__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media (min-width: 1200px) {
+  .statistic__items {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+}
+
+.statistic__item {
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+.item__number {
+  font-size: 72px;
+  color: rgb(237, 237, 237);
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.item__text {
+  font-size: 24px;
+  color: rgb(237, 237, 237);
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 1.25px;
 }
 
 .nav {
