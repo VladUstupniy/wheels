@@ -260,7 +260,12 @@ input::-ms-clear {
   background-size: cover;
   width: 100%;
   height: 100vh;
-  padding: 117px 0px 85px 0px;
+  padding: 50px 0px 85px 0px;
+}
+@media (min-width: 1200px) {
+  .header {
+    padding: 117px 0px 85px 0px;
+  }
 }
 
 .header__text {
@@ -285,14 +290,25 @@ input::-ms-clear {
 .header__mouse {
   position: absolute;
   left: 50%;
-  bottom: 0;
+  bottom: 5%;
   -webkit-transform: translate(-50%, -70%);
       -ms-transform: translate(-50%, -70%);
           transform: translate(-50%, -70%);
-  width: 45px;
-  height: 67px;
+  width: 35px;
+  height: 52px;
   -webkit-animation: mouse 1.5s infinite alternate;
           animation: mouse 1.5s infinite alternate;
+}
+.header__mouse img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+@media (min-width: 1200px) {
+  .header__mouse {
+    width: 45px;
+    height: 67px;
+  }
 }
 
 @-webkit-keyframes mouse {
@@ -313,7 +329,7 @@ input::-ms-clear {
 }
 
 .about-us__content {
-  padding: 0px 96px 0px;
+  padding: 0px 20px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -331,6 +347,11 @@ input::-ms-clear {
   font-weight: 600;
   line-height: 1.2;
   text-align: left;
+}
+@media (min-width: 1200px) {
+  .about-us__content {
+    padding: 0px 96px 0px;
+  }
 }
 
 .about-us__img {
@@ -1031,12 +1052,13 @@ input::-ms-clear {
   position: absolute;
   right: -200px;
   top: 50px;
-  padding: 20px 15px 10px 15px;
+  padding: 20px 50px 10px 20px;
   -webkit-box-shadow: 0px 10px 15px 1px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 10px 15px 1px rgba(0, 0, 0, 0.5);
   -webkit-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
+  background-color: #fff;
 }
 .drop-down__content.active {
   right: 0px;
